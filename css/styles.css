@@ -101,7 +101,7 @@ body {
   color: var(--logo-main-color);
 }
 
-/* Шапка css */
+/* Ш--А--П--К--А */
 
 .header {
   border: 1px solid var(--border-color);
@@ -132,7 +132,22 @@ body {
   color: var(--passive-link-color);
 }
 
-/* футер */
+.contact-link {
+  font-style: normal; /*убираю курсив*/
+  letter-spacing: 0.03em;
+}
+
+.nav-link:hover,
+.contact-link:hover,
+.contact-link.map:hover {
+  color: var(--active-link-color);
+}
+
+.current {
+  color: var(--active-link-color);
+}
+
+/* Ф--У--Т--Е--Р */
 
 footer {
   min-height: 252px;
@@ -170,41 +185,27 @@ footer .container {
 
 /* 
 --------------------------------------
--------------------------------------
-СТРАНИЦА СТУДИЯ */
+------------СТРАНИЦА------------------
+-------------СТУДИЯ-------------------
+ */
 
 main {
   text-align: center;
 }
 
 .section-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 36px;
   line-height: 42px;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
 
-.contact-link {
-  font-style: normal; /*убираю курсив*/
-  letter-spacing: 0.03em;
-}
-
-.nav-link:hover,
-.contact-link:hover,
-.contact-link.map:hover {
-  color: var(--active-link-color);
-}
-
-.current {
-  color: var(--active-link-color);
-}
-
 /* геройчик */
 .hero {
   padding-top: 200px;
   background: var(--banner-color);
-  height: 400px;
+  height: 600px;
   width: 100%;
 }
 
@@ -216,12 +217,11 @@ main {
   color: var(--white-color);
   width: 696px;
   height: 120px;
-  margin: auto;
-  padding-bottom: 30px;
+  margin: 30px auto;
 }
 
 .main-button {
-  margin-top: 30px;
+  display: block;
   background: var(--active-link-color);
   color: var(--white-color);
   font-weight: bold;
@@ -230,6 +230,8 @@ main {
   padding: 10px 32px;
   box-shadow: 0px 4px 4px var(--box-shadow);
   border-radius: 4px;
+  width: 200px;
+  margin: auto;
 }
 
 .main-button:hover {
@@ -237,16 +239,21 @@ main {
 }
 
 /* особенности */
-.features {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 215px;
-  margin-right: 215px;
+.studio-container {
+  display: block;
 }
 
-.features li {
+.features-content {
+  display: flex;
+  padding: 94px 0px;
+}
+
+.features-content li {
   width: 270px;
-  margin: 15px;
+}
+
+.features-content li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .features-title {
@@ -269,12 +276,25 @@ main {
 }
 
 /* Чем мы занимаемся */
+
+.work-section {
+  padding-bottom: 94px;
+}
+
 .work-content {
   display: inline-flex;
 }
 
 .work-content li {
-  margin: 15px;
+  margin-top: 50px;
+}
+
+.work-content li img {
+  vertical-align: bottom;
+}
+
+.work-content li:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Наша команда */
@@ -284,10 +304,14 @@ main {
 }
 
 .team-content li {
-  margin: 15px;
+  margin-top: 50px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team-content li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .team-member {
@@ -308,21 +332,16 @@ main {
   margin-bottom: 30px;
 }
 
-.work-section {
-  padding-bottom: 94px;
-}
-
-/* Наша команда */
-
 .team-section {
   background: var(--grey-color);
-  padding-bottom: 94px;
+  padding: 94px 0px;
 }
 
 /* 
 --------------------------------------
--------------------------------------
-СТРАНИЦА ПОРТФОЛИО */
+------------СТРАНИЦА------------------
+------------ПОРТФОЛИО-----------------
+ */
 
 .section-portfolio {
   margin-top: 94px;
