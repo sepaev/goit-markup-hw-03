@@ -1,5 +1,4 @@
 :root {
-  /* Обьявил переменные */
   --main-text-color: #212121; /* цвет заголовка #212121 */
   --secondary-text-color: #757575; /* основной цвет текста #757575 */
   --main-background-color: #e5e5e5; /* основной цвет фона #E5E5E5 */
@@ -24,10 +23,11 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 1px solid red; /* временно */
 }
 
+/*СКРЫТЫЙ КЛАСС*/
 .visually-hidden {
-  /* Добавил скрытый класс */
   position: absolute;
   white-space: nowrap;
   clip-path: inset(100%);
@@ -42,7 +42,7 @@ html {
 
 ul,
 li {
-  list-style-type: none; /* Убираю маркеры */
+  list-style-type: none; /* УБИРАЮ МАРКЕРЫ */
 }
 
 h1,
@@ -61,7 +61,6 @@ p {
 
 a {
   text-decoration: none; /* Отменяю подчеркивание у ссылок */
-  cursor: pointer;
   background-color: transparent;
 }
 
@@ -70,7 +69,7 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 16px;
-  width: auto;
+  min-width: 1600px;
   margin: 0;
 }
 
@@ -79,6 +78,15 @@ body {
   display: flex;
   border: 1px solid var(--border-color);
   justify-content: space-between;
+  min-height: 80px;
+}
+
+.container {
+  min-width: 1200px;
+  margin: 0px 200px;
+  padding: 0 15px;
+  display: flex;
+  align-content: center;
 }
 
 main {
@@ -105,15 +113,14 @@ section {
   color: var(--black-color);
   font-size: 26px;
   line-height: 35.96px;
-  margin-bottom: 25px;
-  margin-left: 215px;
+  margin-right: 93px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
 }
 
-.logo-link-header {
+/* .logo-link-header {
   margin-top: 24px;
-}
+} */
 
 .logo-link-footer {
   color: var(--text-white-color);
@@ -127,17 +134,9 @@ section {
 /* навигация */
 .nav,
 .contacts-header {
-  display: inline-flex;
-  padding: 0px;
-  margin-left: 43px;
-  margin-top: 32px;
-}
-
-.contacts-header {
-  text-align: right;
+  display: flex;
   font-weight: 500;
   letter-spacing: 0.02em;
-  margin-right: 215px;
 }
 
 .contacts-footer {
@@ -151,13 +150,12 @@ section {
 
 .nav-link {
   color: var(--main-text-color);
-  margin-left: 50px;
   font-weight: 500;
+  margin-right: 50px;
 }
 
 .contact-link {
   font-style: normal; /*убираю курсив*/
-  line-height: 24px;
   letter-spacing: 0.03em;
 }
 
@@ -358,7 +356,8 @@ footer {
   padding-right: 215px;
   padding-bottom: 94px;
   display: flex;
-  width: auto;
+  width: 1600px;
+  flex-wrap: wrap;
 }
 
 .portfolio-content li {
@@ -387,7 +386,6 @@ footer {
   color: var(--secondary-text-color);
   display: flex;
   align-content: space-between;
-  flex-wrap: wrap;
   margin-left: 24px;
   margin-bottom: 20px;
 }
