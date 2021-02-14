@@ -445,3 +445,22 @@ main {
   color: var(--secondary-text-color);
   letter-spacing: 0.03em;
 }
+
+/* 
+--------------------------------------
+------------СТРАНИЦА------------------
+------------КОНТАКТЫ-----------------
+ */
+
+.google-map {
+  display: block;
+  height: 450px;
+  border: 0;
+  margin: var(--standart-50px) auto;
+}
+
+.contacts-section {
+  display: block;
+  text-align: center;
+  margin: var(--standart-94px) auto;
+}
